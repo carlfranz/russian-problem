@@ -18,6 +18,7 @@ struct Problem
 {
     std::vector<int> instance;
     int size;
+    char * lut;
 };
 
 void enumeration(Problem p, std::vector<std::vector<int>> s, int i, std::vector<int> r);
@@ -27,6 +28,11 @@ std::vector<std::vector<int>> choiches(Problem p, std::vector<std::vector<int>> 
 void processSolution(Problem p, std::vector<std::vector<int>> s, int i, std::vector<int> r);
 
 bool accept(Problem p, std::vector<std::vector<int>> s, int i, std::vector<int> r);
+
+bool reject(Problem p, std::vector<std::vector<int>> s, int i, std::vector<int> r);
+
+bool constraintA(Problem p, std::vector<std::vector<int>> s, int i, std::vector<int> r);
+bool constraintC(Problem p, std::vector<std::vector<int>> s, int i, std::vector<int> r);
 
 std::ostream &operator<<(std::ostream &o, const Solution &s);
 
